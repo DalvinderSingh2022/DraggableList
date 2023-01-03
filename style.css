@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --border: #eee;
+    --background: #aaa;
+    --text: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100vh - 4em);
+    margin: 0;
+    padding: 2em;
+    gap: 1em;
+}
+
+ul {
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0;
+    list-style-type: none;
+    width: 540px;
+}
+
+ul li {
+    background: #fff;
+    display: flex;
+}
+
+ul li:not(:last-of-type) {
+    border-bottom: 1px solid var(--border);
+}
+
+ul .number {
+    background: var(--background);
+    font-size: 28px;
+    width: 60px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+ul li.over .list-person {
+    background: #c0c0c0;
+}
+
+ul li.right .person-name {
+    color: #2b9a52;
+}
+
+ul li.wrong .person-name {
+    color: #a92626;
+}
+
+.list-person {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    flex: 1;
+    gap: 16px;
+    font-weight: bold;
+}
+
+.list-person .icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-person .icons i{
+    margin: -5px 0;
+}
+.buttons button {
+    background: var(--background);
+    border: none;
+    color: var(--text);
+    font-size: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.buttons button:active {
+    transform: scale(0.9);
+}
+
+.buttons button:focus {
+    outline: none;
+}
